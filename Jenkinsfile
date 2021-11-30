@@ -34,7 +34,7 @@ node {
             }else{
                  rc = bat returnStatus: true, script: "\"${toolbelt}\" force:auth:jwt:grant --clientid ${CONNECTED_APP_CONSUMER_KEY} --username ${SFDC_HOST} --jwtkeyfile \"${jwt_key_file}\" --setdefaultdevhubusername --instanceurl ${HUB_ORG}"
             }
-            if (rc != 0) { error 'hub org authorization failed' }
+            if (rc != 0) { error 'hub org authorization ' }
 
 			println rc
 			
